@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#faf8ff", "on-background": "#131b2e", "secondary-fixed-dim": "#c3c0ff", "surface-container-highest": "#dae2fd", "secondary": "#5654a8", "surface-container-low": "#f2f3ff", "surface-tint": "#4d44e3", "on-error": "#ffffff", "secondary-fixed": "#e2dfff", "surface": "#faf8ff", "on-secondary": "#ffffff", "primary-container": "#4f46e5", "inverse-on-surface": "#eef0ff", "surface-container-lowest": "#ffffff", "surface-bright": "#faf8ff", "on-secondary-fixed-variant": "#3e3c8f", "on-tertiary-fixed": "#002113", "on-tertiary": "#ffffff", "primary-fixed-dim": "#c3c0ff", "outline-variant": "#c7c4d8", "inverse-primary": "#c3c0ff", "on-surface-variant": "#464555", "on-surface": "#131b2e", "tertiary": "#005338", "on-tertiary-fixed-variant": "#005236", "surface-container": "#eaedff", "tertiary-container": "#006e4b", "on-primary-fixed-variant": "#3323cc", "on-secondary-fixed": "#100563", "secondary-container": "#a7a5ff", "on-secondary-container": "#393689", "surface-dim": "#d2d9f4", "tertiary-fixed": "#6ffbbe", "primary-fixed": "#e2dfff", "on-primary-container": "#dad7ff", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-container-high": "#e2e7ff", "error": "#ba1a1a", "tertiary-fixed-dim": "#4edea3", "primary": "#3525cd", "on-primary": "#ffffff", "on-tertiary-container": "#67f4b7", "on-primary-fixed": "#0f0069", "surface-variant": "#dae2fd", "inverse-surface": "#283044", "outline": "#777587" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1.25rem", "gutter-mobile": "0.75rem", "space-lg": "1.25rem", "margin-mobile": "1rem", "space-md": "0.875rem", "space-xl": "1.75rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1rem" }, fontFamily: { "display-stat": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-stat": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"] }, fontSize: { "display-stat": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-stat": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="A sleek geometric mobile app logo for 'AttendPulse / AttendX' College Attendance Tracker. Stylized checkmark intersecting with a circular academic graduation cap or pie chart ring, minimalist flat vector, energetic indigo (#4F46E5) and emerald green accents, white background, high contrast modern app icon.. Design context: - Primary color: #4f46e5
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1UGeEylcFrO_RK9QTHf_BaOkBsnagkCpIqIPEAUD4bhHnRHIrDkts5HioxIVehG5E9Tg9QOox2LpIpdS-gsJbMu5VlSUg17PauNF74BHg1jQKm7UPX1N2o5wNrkXkdXiYv7nHFKNOc1bIhNh292-SshfvwB28rce6NW5SPQHHZBSPXpMIl8TFCxGK8GZSooI1OAGWt6WBE90hRMYnhgcM9yer9PzXFGlqFIpb6L-L3UV726aD-r2uYCN_QT"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Generate Audit Report</h1></div><div class="flex items-center gap-1.5"><span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-semibold tracking-wide">SEM 6</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Spring '25</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button aria-label="Student Profile" class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida/AEtjO1WZLkAvMB39MvstlQyvNBIyPp2Oq7tZ7fwOPQUKJKXOYNkbA1eiPx8nna24l1qzVWlNWXBpRV-mZzx98XHWBshaYEGLXcMAYXyJIDxMOWMCxGAJ8ABlmPDgZb1XRLUBJpjfHS2FxBy-M9BI9P8OXr_cqD9wW9WihbTQf32VVr_bSIpojIxMJH3FNbouURZBYkbQGtv4EqmD0yPT55-uQoybWic4XPicgT3hUjDkPYDr6MqkVhPFoagStIQ"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-8 space-y-space-lg">
+<!-- Header / Intro Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md mb-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Official Academic Transcript v2.4</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-1">
+      Attendance &amp; Audit Report Generator
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Configure report parameters, export criteria, and formatting for official college submission or personal records.
+    </p>
+</div>
+<!-- Form Section 1: Date Range Selection -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">1. Select Reporting Period</h3>
+</div>
+<!-- Quick Preset Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<button class="preset-pill px-3 py-1.5 rounded-full font-label-stat text-label-stat flex items-center gap-1.5 shrink-0 transition-colors bg-primary text-on-primary shadow-sm" data-preset="sem4" type="button">
+<span class="material-symbols-outlined text-[14px]">check</span>
+        Full Semester (Sem 4)
+      </button>
+<button class="preset-pill px-3 py-1.5 rounded-full font-label-stat text-label-stat flex items-center gap-1.5 shrink-0 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-preset="month" type="button">
+        Current Month (Nov 2024)
+      </button>
+<button class="preset-pill px-3 py-1.5 rounded-full font-label-stat text-label-stat flex items-center gap-1.5 shrink-0 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-preset="30days" type="button">
+        Past 30 Days
+      </button>
+<button class="preset-pill px-3 py-1.5 rounded-full font-label-stat text-label-stat flex items-center gap-1.5 shrink-0 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-preset="custom" type="button">
+        Custom Range
+      </button>
+</div>
+<!-- Date Inputs (2 cols) -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant" for="start-date">Start Date</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2.5">
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none pr-6" id="start-date" type="text" value="Aug 01, 2024"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[18px] pointer-events-none">event</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant" for="end-date">End Date</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2.5">
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none pr-6" id="end-date" type="text" value="Nov 21, 2024"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[18px] pointer-events-none">event</span>
+</div>
+</div>
+</div>
+<!-- Toggle: Scheduled / Pledged Sessions -->
+<div class="flex items-center justify-between pt-2">
+<div class="pr-3">
+<p class="font-label-lg text-label-lg text-on-surface">Include Upcoming Scheduled Sessions</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Buffer projections for pledged &amp; future timetable slots</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+</section>
+<!-- Form Section 2: Student & Cohort Category -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">2. Student &amp; Cohort Category</h3>
+</div>
+<!-- Selectable Category Cards -->
+<div class="space-y-2">
+<!-- Option 1: Selected -->
+<div class="cohort-option flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer transition-all" data-active="true">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">My Individual Records</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ananya Sharma (21BCSE104)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">check_circle</span>
+</div>
+<!-- Option 2 -->
+<div class="cohort-option flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer opacity-70 hover:opacity-100 transition-all" data-active="false">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">CSE Section B (Batch Aggregate)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cohort average &amp; percentile rank</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Option 3 -->
+<div class="cohort-option flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer opacity-70 hover:opacity-100 transition-all" data-active="false">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Faculty / Lab Group</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prof. Arthur Davis (Networks Lab)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Meta Toggles -->
+<div class="pt-2 space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Include Semester Roll No. &amp; University ERP ID</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mandatory for registrar submission</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Include Faculty Endorsement Sign-off Line</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adds physical signature line on last page</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Form Section 3: Data Points & Metrics to Include -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">checklist</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">3. Data Points &amp; Metrics to Include</h3>
+</div>
+<div class="space-y-3">
+<!-- Toggle 1: ON -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">Subject-Wise Percentage Breakdown</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes attended vs total classes per course</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+<!-- Toggle 2: ON -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">75% Threshold &amp; Debarment Risk Margin</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shows safe skip buffer count and deficit recovery stats</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+<!-- Toggle 3: ON -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">Chronological Attendance Audit Logs</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Day-by-day timestamps, period tags &amp; instructor notes</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+<!-- Toggle 4: OFF -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">Medical Leave &amp; Excusal Slips</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Append verified medical certificates &amp; dean approval IDs</p>
+</div>
+<button aria-checked="false" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-surface-container-highest relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-0"></span>
+</button>
+</div>
+<!-- Toggle 5: ON -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">ERP Sync Timestamp &amp; Discrepancy Diff</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Highlight variance between offline ledger and college portal</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-primary relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-6"></span>
+</button>
+</div>
+<!-- Toggle 6: OFF -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="pr-2">
+<p class="font-label-lg text-label-lg text-on-surface">Simulation &amp; Projected Recovery Milestones</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">What-if simulation roadmap for upcoming class blocks</p>
+</div>
+<button aria-checked="false" class="toggle-btn w-12 h-6 rounded-full p-0.5 transition-colors bg-surface-container-highest relative shrink-0" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-surface shadow-md transform transition-transform translate-x-0"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- Form Section 4: Document Layout Preview -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">4. Document Layout Preview</h3>
+</div>
+<span class="font-label-stat text-label-stat text-primary bg-primary-fixed px-2 py-0.5 rounded-full">Live Mock</span>
+</div>
+<!-- Mini Paper Thumbnail -->
+<div class="bg-surface-container-low p-4 rounded-xl flex justify-center items-center">
+<div class="w-full max-w-[280px] bg-surface rounded-lg shadow-md p-3.5 space-y-2.5 text-[8px] leading-tight select-none">
+<!-- Sheet Header -->
+<div class="flex items-center justify-between pb-1.5 border-b border-surface-container-high">
+<div class="flex items-center gap-1.5">
+<div class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[10px]">school</span>
+</div>
+<div>
+<p class="font-bold text-on-surface leading-none text-[8px]">AttendX • AUDIT TRANSCRIPT</p>
+<p class="text-on-surface-variant text-[6px]">Department of Computer Science</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<!-- Sheet Student Info -->
+<div class="flex items-center justify-between text-[7px] text-on-surface-variant">
+<div>
+<span class="font-bold text-on-surface">Ananya Sharma</span> (21BCSE104)
+          </div>
+<span>Sem 4 • 2024-25</span>
+</div>
+<!-- Sheet Metric Row -->
+<div class="bg-surface-container rounded p-1.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<!-- Inline Mini Circular Progress Ring -->
+<svg class="w-5 h-5 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82.4, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div>
+<span class="font-bold text-on-surface text-[8px]">82.4%</span>
+<span class="text-tertiary-container font-semibold ml-0.5 text-[7px]">SAFE ZONE</span>
+</div>
+</div>
+<span class="text-on-surface-variant text-[7px]">+4 Bunk Buffer</span>
+</div>
+<!-- Sheet Course Table Sample -->
+<div class="space-y-1 text-[7px]">
+<div class="flex items-center justify-between text-on-surface-variant font-semibold">
+<span>Course Code</span>
+<span>Attended / Total</span>
+<span>Status</span>
+</div>
+<div class="flex items-center justify-between py-0.5 bg-surface-container-low px-1 rounded">
+<span class="font-bold text-on-surface">CS-401 OS</span>
+<span>38 / 42</span>
+<span class="text-tertiary-container font-bold">90.5%</span>
+</div>
+<div class="flex items-center justify-between py-0.5 bg-surface-container-low px-1 rounded">
+<span class="font-bold text-on-surface">CS-402 DBMS</span>
+<span>34 / 40</span>
+<span class="text-tertiary-container font-bold">85.0%</span>
+</div>
+<div class="flex items-center justify-between py-0.5 bg-surface-container-low px-1 rounded">
+<span class="font-bold text-on-surface">CS-404 Algo</span>
+<span>28 / 36</span>
+<span class="text-primary font-bold">77.7%</span>
+</div>
+<div class="flex items-center justify-between py-0.5 bg-surface-container-low px-1 rounded">
+<span class="font-bold text-on-surface">CS-406 Net Lab</span>
+<span>20 / 22</span>
+<span class="text-tertiary-container font-bold">90.9%</span>
+</div>
+</div>
+<!-- Sheet Footer with Barcode Watermark -->
+<div class="pt-1 border-t border-surface-container flex items-center justify-between text-[6px] text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">qr_code_2</span>
+<span>AUTH_HASH: AX-9482-B</span>
+</div>
+<span>Page 1 of 2</span>
+</div>
+</div>
+</div>
+<!-- Format Metadata Pill -->
+<div class="flex items-center justify-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px] text-primary">picture_as_pdf</span>
+        PDF • Letter Standard • 2 Pages Estimated • ~340 KB
+      </span>
+</div>
+<!-- Format Selector Chips -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="format-btn py-2 px-2 rounded-lg font-label-md text-label-md text-center transition-colors bg-primary text-on-primary shadow-sm" data-format="pdf" type="button">
+        PDF Document
+      </button>
+<button class="format-btn py-2 px-2 rounded-lg font-label-md text-label-md text-center transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-format="xlsx" type="button">
+        Excel (.xlsx)
+      </button>
+<button class="format-btn py-2 px-2 rounded-lg font-label-md text-label-md text-center transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" data-format="csv" type="button">
+        CSV Flat
+      </button>
+</div>
+</section>
+<!-- Sticky / Bottom Prominent Primary Action -->
+<div class="space-y-space-sm pt-2">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(79,70,229,0.35)] active:scale-[0.98] transition-transform" id="generate-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Generate Report</span>
+</button>
+<div class="flex justify-center">
+<button class="font-label-lg text-label-lg text-primary hover:underline flex items-center gap-1 py-1" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>Save Configuration as Preset</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1.5 text-center px-4">
+<span class="material-symbols-outlined text-tertiary-container text-[14px]">lock</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Report will include verified cryptographic verification hash <span class="font-mono text-on-surface font-semibold">#AX-9482-B</span>.
+      </p>
+</div>
+</div><div class="pt-2 pb-2"><button class="w-full h-12 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md hover:bg-primary/90 active:scale-[0.98] transition-transform" data-navigate="{{DATA:SCREEN:SCREEN_60}}" onclick="window.location.hash='#screen-60'; if(typeof navigateTo==='function'){navigateTo('{{DATA:SCREEN:SCREEN_60}}');} else if(window.parent &amp;&amp; window.parent.postMessage){window.parent.postMessage({type:'NAVIGATE_SCREEN',screenId:'{{DATA:SCREEN:SCREEN_60}}'},'*');}" type="button"><span>Next</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button></div>
+</div>
+<script>
+  // Interactive Toggle Switches
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isChecked = btn.getAttribute('aria-checked') === 'true';
+      const thumb = btn.querySelector('span');
+      if (isChecked) {
+        btn.setAttribute('aria-checked', 'false');
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-surface-container-highest');
+        thumb.classList.remove('translate-x-6');
+        thumb.classList.add('translate-x-0');
+      } else {
+        btn.setAttribute('aria-checked', 'true');
+        btn.classList.add('bg-primary');
+        btn.classList.remove('bg-surface-container-highest');
+        thumb.classList.add('translate-x-6');
+        thumb.classList.remove('translate-x-0');
+      }
+    });
+  });
+
+  // Reporting Preset Pills
+  document.querySelectorAll('.preset-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.preset-pill').forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        const icon = p.querySelector('.material-symbols-outlined');
+        if (icon) icon.remove();
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      const check = document.createElement('span');
+      check.className = 'material-symbols-outlined text-[14px]';
+      check.innerText = 'check';
+      pill.prepend(check);
+    });
+  });
+
+  // Student & Cohort Selector
+  document.querySelectorAll('.cohort-option').forEach(option => {
+    option.addEventListener('click', () => {
+      document.querySelectorAll('.cohort-option').forEach(o => {
+        o.setAttribute('data-active', 'false');
+        o.classList.add('opacity-70');
+        const icon = o.querySelector('.material-symbols-outlined:last-child');
+        icon.innerText = 'radio_button_unchecked';
+        icon.className = 'material-symbols-outlined text-outline-variant text-[20px]';
+      });
+      option.setAttribute('data-active', 'true');
+      option.classList.remove('opacity-70');
+      const activeIcon = option.querySelector('.material-symbols-outlined:last-child');
+      activeIcon.innerText = 'check_circle';
+      activeIcon.className = 'material-symbols-outlined text-tertiary-container text-[20px]';
+    });
+  });
+
+  // Format Selector Chips
+  document.querySelectorAll('.format-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.format-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Generation Micro-interaction
+  const genBtn = document.getElementById('generate-btn');
+  if (genBtn) {
+    genBtn.addEventListener('click', () => {
+      const origContent = genBtn.innerHTML;
+      genBtn.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-[20px]">sync</span>
+        <span>Compiling Transcript...</span>
+      `;
+      setTimeout(() => {
+        genBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check</span>
+          <span>Transcript Ready!</span>
+        `;
+        setTimeout(() => {
+          genBtn.innerHTML = origContent;
+        }, 2200);
+      }, 1200);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(15,23,42,0.06)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around relative"><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></a><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="planner" href="#"><span class="material-symbols-outlined text-[24px]">calendar_today</span><span class="font-label-md text-label-md">Planner</span></a><div class="flex-1 flex items-center justify-center relative -top-3"><a aria-label="Quick Mark Attendance" class="w-13 h-13 w-[52px] h-[52px] rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0_8px_20px_rgba(79,70,229,0.35)] hover:scale-105 active:scale-95 transition-all" data-path="quick-mark" href="#"><span class="material-symbols-outlined text-[26px]">how_to_reg</span></a></div><a aria-current="page" class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-0.5 transition-colors text-primary font-semibold" data-path="generate-audit-report" href="#"><span class="material-symbols-outlined text-[24px]">assessment</span><span class="font-label-md text-label-md">Audit</span></a><a class="flex-1 min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="history-and-reports" href="#"><span class="material-symbols-outlined text-[24px]">history</span><span class="font-label-md text-label-md">History</span></a></div></nav></body></html>
